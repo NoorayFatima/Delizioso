@@ -1,0 +1,343 @@
+body {
+  overflow-x: hidden;
+}
+
+/*resuable css*/
+.font {
+  font-family: 'Playfair Display';
+}
+
+/*font-family:'Playfair Display', serif; /* Elegant font */
+;
+
+.color {
+  color: #8b3a25;
+}
+
+.outlined-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #fff;
+  text-stroke: 1.5px #fff;
+  line-height: 1.2;
+  text-align: center;
+
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #8b3a25;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.top-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Main Navbar */
+.main-navbar {
+  background-color: #111;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-nav .nav-link {
+  color: #ccc;
+  font-weight: 500;
+  margin: 0 10px;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+.cart-icon {
+  position: relative;
+  color: #fff;
+}
+
+.cart-icon .badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-size: 0.7rem;
+}
+
+/*hero section styling*/
+.btn-outline-light {
+  border: 2px solid #8b3a25;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.5);
+}
+
+.btn-glow {
+  background: linear-gradient(135deg, #8b3a25, #8b3a25);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 5px rgba(233, 78, 119, 0.4);
+}
+
+.btn-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 10px rgba(233, 78, 119, 0.6);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero-content h1,
+.hero-content p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+
+/*menu section*/
+.menu-img-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.menu-img-wrapper:hover .menu-img {
+  transform: scale(1.05);
+}
+
+.menu-img {
+  transition: transform 0.3s ease;
+}
+
+/*about section*/
+.about-section {
+  background: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+  background-color: #f3ebe9;
+  padding: 80px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.about-img {
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-content {
+  background: rgba(139, 58, 37, 0.85);
+  /* Your theme color with transparency */
+  backdrop-filter: blur(8px);
+  /* Glass effect */
+  color: #fff;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.about-content h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  border-left: 5px solid #fff;
+  padding-left: 15px;
+}
+
+.about-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-quote {
+  font-style: italic;
+  font-size: 1rem;
+  border-left: 3px solid #fff;
+  padding-left: 15px;
+  opacity: 0.95;
+  color: #ffe6d9;
+}
+
+.about-content h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.about-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/*gallery section*/
+
+.section-title {
+  /*font-family: 'Playfair Display', serif;*/
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #8b3a25;
+}
+
+.gallery-item {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(139, 58, 37, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h5 {
+  color: #fff;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/* Testimonial */
+.testimonials {
+  background-color: #f9f3f1;
+  color: #8b3a25;
+}
+
+.testimonials img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.book-table {
+  background: linear-gradient(135deg, #1c1c1c, #3a1a1a);
+}
+
+.booking-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+}
+
+.btn-glow {
+  background-color: transparent;
+  border: 2px solid #8b3a25;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+.btn-glow:hover {
+  background-color: #8b3a25;
+  box-shadow: 0 0 15px #8b3a25a6;
+  color: white;
+}
+
+
+/* Footer */
+.footer {
+  /* background-color: #2f1e17;*/
+  font-size: 15px;
+  background: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+  background-color: #f3ebe9;
+}
+
+.footer h5 {
+  color: #111111;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #8b3a25;
+}
+
+.social-icons a {
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #8b3a25;
+  transform: scale(1.2);
+}

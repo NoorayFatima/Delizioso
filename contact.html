@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delizioso-Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 🔝 Top Bar -->
+  <div class="top-bar py-2 px-3 d-none d-md-flex justify-content-between align-items-center">
+    <div>
+      <i class="fas fa-phone-alt me-2"></i> +00 1234 567
+      <i class="fas fa-paper-plane ms-4 me-2"></i> info@delizioso.com
+    </div>
+    <div>
+      <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-dribbble"></i></a>
+      <a href="#" class="me-3">Sign Up</a>
+      <a href="#">Log In</a>
+    </div>
+  </div>
+
+  <!-- 🔻 Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar navbar-dark main-navbar position-absolute start-0 w-100" style="background-color: rgba(0, 0, 0, 0.9); z-index: 1030;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Delizioso</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!--<div class="cart-icon ms-auto d-none d-lg-block">
+        <i class="fas fa-shopping-bag fs-5"></i>
+        <span class="badge bg-danger rounded-pill">3</span>
+      </div>-->
+    </div>
+  </nav>
+
+  <!--navbar end-->
+
+
+
+
+<!-- Booking/Contact Page -->
+<section class="contact-section py-5" style="background: url('https://www.toptal.com/designers/subtlepatterns/patterns/restaurant.png') repeat; background-size: cover;">
+    <div class="container">
+      <div class="text-center mb-5 mt-5">
+        <h1 class="fw-bold" style="color: #8b3a25;">Reserve Your Table</h1>
+        <p class="text-black fw-bold">Experience the taste of luxury. Book your spot now!</p>
+      </div>
+      <div class="row g-4 align-items-center">
+        <!-- Booking Form -->
+        <div class="col-md-7">
+          <form class="p-4 bg-dark rounded-4 shadow-lg">
+            <div class="mb-3">
+              <label class="form-label text-white fw-bold">Name</label>
+              <input type="text" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-white fw-bold">Email</label>
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-white fw-bold">Phone</label>
+              <input type="tel" class="form-control" placeholder="Enter your phone number" required>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label text-white fw-bold">Date</label>
+                <input type="date" class="form-control" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label text-white fw-bold">Time</label>
+                <input type="time" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-white fw-bold">Number of People</label>
+              <input type="number" class="form-control" min="1" placeholder="How many guests?" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-white fw-bold">Special Requests</label>
+              <textarea class="form-control" rows="3" placeholder="Any special requests?"></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-lg px-5" style="background-color: #8b3a25; color: #fff; transition: 0.3s;">
+                Book Now
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Contact Info -->
+        <div class="col-md-5 text-light">
+          <div class="bg-dark rounded-4 p-4 shadow-lg">
+            <h4>Contact Us</h4>
+            <p><i class="bi bi-geo-alt-fill"></i> 123 Main Street, FoodCity</p>
+            <p><i class="bi bi-telephone-fill"></i> +1 234 567 890</p>
+            <p><i class="bi bi-envelope-fill"></i> info@deliciousrestaurant.com</p>
+            <div class="mt-4">
+              <h4>Opening Hours :</h4>
+              <p>Monday - Friday: 10:00 AM - 10:00 PM</p>
+              <p>Saturday - Sunday: 12:00 PM - 11:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer text-light pt-5 pb-4" id="footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-3">
+        <h3 class="fw-bold text-black">Delizioso</h3>
+        <p class="text-black">A warm, elegant dining experience offering mouthwatering dishes prepared with love and passion.Enjoy your meal at Delizioso.</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-black">Home</a></li>
+          <li><a href="menu.html" class="text-black">Menu</a></li>
+          <li><a href="about-us.html" class="text-black">About</a></li>
+          <li><a href="index.html#gallery" class="text-black">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5 class="text-black fw-bold">Hours</h5>
+        <p class="text-black">Mon-Fri: 10AM - 10PM</p>
+        <p class="text-black">Sat-Sun: 12PM - 11PM</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="text-black fw-bold">Let's Connect</h5>
+        <a href="#" class="text-black me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-black me-3"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-black me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-black"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="text-center text-black mt-4">
+      <small>© 2025 Delizioso. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+  
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+  </body>
+  </html>
+  

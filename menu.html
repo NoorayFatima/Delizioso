@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delizioso-Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="stylesheet" href="index.css">
+
+  <style>
+    .menu-section {
+      background: #f9f3f0;
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      color: #8b3a25;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #5c3b2e;
+      margin-bottom: 50px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-card h3 {
+      color: #8b3a25;
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 15px 0 10px 0;
+    }
+
+    .menu-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 20px 20px 20px;
+    }
+
+    .menu-card ul li {
+      font-size: 1.1rem;
+      color: #5c3b2e;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .menu-btn {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .menu-btn .btn {
+      background-color: #8b3a25;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.4s;
+    }
+
+    .menu-btn .btn:hover {
+      background-color: #5c2418;
+    }
+
+    .menu-category {
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    .menu-category h2 {
+      color: #8b3a25;
+      margin-bottom: 30px;
+      font-size: 2.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .dish-card {
+      background: #8b3a25;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      padding-bottom: 15px;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .dish-name {
+      color: #ffffff;
+      font-size: 1.5rem;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .dish-desc {
+      font-size: 0.9rem;
+      color: #cccccc;
+      margin: 10px 0;
+      padding: 0 10px;
+    }
+
+    .dish-price {
+      color: #111111;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- 🔝 Top Bar -->
+  <div class="top-bar py-2 px-3 d-none d-md-flex justify-content-between align-items-center">
+    <div>
+      <i class="fas fa-phone-alt me-2"></i> +00 1234 567
+      <i class="fas fa-paper-plane ms-4 me-2"></i> info@delizioso.com
+    </div>
+    <div>
+      <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-dribbble"></i></a>
+      <a href="#" class="me-3">Sign Up</a>
+      <a href="#">Log In</a>
+    </div>
+  </div>
+
+  <!-- 🔻 Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar navbar-dark main-navbar position-absolute start-0 w-100"
+    style="background-color: rgba(0, 0, 0, 0.9); z-index: 1030;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Delizioso</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!--<div class="cart-icon ms-auto d-none d-lg-block">
+        <i class="fas fa-shopping-bag fs-5"></i>
+        <span class="badge bg-danger rounded-pill">3</span>
+      </div>-->
+    </div>
+  </nav>
+
+  <!--navbar end-->
+
+
+  <!--Main section start-->
+
+
+
+  <!-- Menu Page Start -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="section-title mt-3">Our Delicious Menu</h2>
+      <p class="section-subtitle">Taste the best dishes crafted with love and fresh ingredients!</p>
+
+
+      <!-- Starters Section -->
+      <section class="menu-category text-center animate__animated animate__fadeInUp">
+        <h2>Starters</h2>
+        <div class="row g-4">
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2022/08/02/07/30/garlic-bread-7359756_1280.jpg"
+                alt="Garlic Bread">
+              <div class="dish-name">Garlic Bread</div>
+              <div class="dish-desc">Crispy, buttery bread topped with garlic and herbs.</div>
+              <div class="dish-price">$5.99</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2017/09/03/01/17/wings-2709068_1280.jpg" alt="Chicken Wings">
+              <div class="dish-name">Chicken Wings</div>
+              <div class="dish-desc">Spicy, tender wings served with signature sauce.</div>
+              <div class="dish-price">$7.49</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2015/07/08/19/40/food-836806_1280.jpg" alt="Soup">
+              <div class="dish-name">Hot Soup</div>
+              <div class="dish-desc">Warm your soul with our homemade soup.</div>
+              <div class="dish-price">$4.50</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2015/06/15/03/48/gourmet-809866_1280.jpg" alt="Spring Rolls">
+              <div class="dish-name">Spring Rolls</div>
+              <div class="dish-desc">Crispy vegetarian rolls with sweet chili sauce.</div>
+              <div class="dish-price">$6.25</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Main Course Section -->
+      <section class="menu-category text-center animate__animated animate__fadeInUp">
+        <h2>Main Course</h2>
+        <div class="row g-4">
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2023/11/22/08/22/pizza-8404974_1280.jpg" alt="Margherita Pizza">
+              <div class="dish-name">Margherita Pizza</div>
+              <div class="dish-desc">Classic pizza with mozzarella, tomatoes & basil.</div>
+              <div class="dish-price">$12.99</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2019/01/29/18/05/burger-3962997_1280.jpg" alt="Beef Burger">
+              <div class="dish-name">Beef Burger</div>
+              <div class="dish-desc">Juicy beef patty with melted cheddar & pickles.</div>
+              <div class="dish-price">$10.49</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2018/07/18/19/12/pasta-3547078_1280.jpg" alt="Alfredo Pasta">
+              <div class="dish-name">Alfredo Pasta</div>
+              <div class="dish-desc">Creamy alfredo sauce over soft fettuccine pasta.</div>
+              <div class="dish-price">$11.75</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2021/08/29/11/31/steak-6583041_1280.jpg" alt="Grilled Steak">
+              <div class="dish-name">Grilled Steak</div>
+              <div class="dish-desc">Perfectly grilled tenderloin steak with sides.</div>
+              <div class="dish-price">$18.99</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Desserts Section -->
+      <section class="menu-category text-center animate__animated animate__fadeInUp">
+        <h2>Desserts</h2>
+        <div class="row g-4">
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2019/01/28/10/02/ferrero-rocher-cake-3960005_1280.jpg"
+                alt="Chocolate Lava Cake">
+              <div class="dish-name">Lava Cake</div>
+              <div class="dish-desc">Warm chocolate cake with a gooey center.</div>
+              <div class="dish-price">$6.99</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2014/11/28/08/03/brownie-548591_1280.jpg" alt="Brownie Delight">
+              <div class="dish-name">Brownie Delight</div>
+              <div class="dish-desc">Rich, fudgy brownie topped with vanilla ice cream.</div>
+              <div class="dish-price">$5.50</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2017/10/19/13/25/cheesecake-2867614_1280.jpg" alt="Cheesecake">
+              <div class="dish-name">Cheesecake</div>
+              <div class="dish-desc">Creamy cheesecake with fresh strawberry topping.</div>
+              <div class="dish-price">$7.99</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2016/12/26/16/09/bowl-1932375_1280.jpg" alt="Ice Cream">
+              <div class="dish-name">Ice Cream</div>
+              <div class="dish-desc">3 scoops of your favorite classic flavors.</div>
+              <div class="dish-price">$4.25</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Beverages Section -->
+      <section class="menu-category text-center animate__animated animate__fadeInUp">
+        <h2>Beverages</h2>
+        <div class="row g-4">
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2019/01/21/15/05/juice-3946228_1280.jpg" alt="Fresh Lemonade">
+              <div class="dish-name">Fresh Lemonade</div>
+              <div class="dish-desc">Chilled fresh lemonade with mint leaves.</div>
+              <div class="dish-price">$3.50</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2015/06/28/19/38/iced-coffee-824818_1280.jpg" alt="Iced Coffee">
+              <div class="dish-name">Iced Coffee</div>
+              <div class="dish-desc">Cold brewed coffee with cream and sugar.</div>
+              <div class="dish-price">$4.00</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2023/05/31/11/14/smoothie-8031132_1280.jpg" alt="Smoothie">
+              <div class="dish-name">Fruit Smoothie</div>
+              <div class="dish-desc">Blend of fresh fruits and yogurt goodness.</div>
+              <div class="dish-price">$5.75</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="dish-card">
+              <img src="https://cdn.pixabay.com/photo/2022/04/24/21/46/drink-7154538_1280.png" alt="Mocktail">
+              <div class="dish-name">Mocktail</div>
+              <div class="dish-desc">enjoy refreshing mix of juices and soda.</div>
+              <div class="dish-price">$6.00</div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>
+  <!-- Menu Page End -->
+
+
+
+
+
+  <!--Main section end-->
+
+
+
+  <!-- Footer Section -->
+
+  <footer class="footer text-light pt-5 pb-4" id="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-3">
+          <h3 class="fw-bold text-black">Delizioso</h3>
+          <p class="text-black">A warm, elegant dining experience offering mouthwatering dishes prepared with love and passion.Enjoy your meal at Delizioso.</p>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-black">Home</a></li>
+            <li><a href="menu.html" class="text-black">Menu</a></li>
+            <li><a href="about-us.html" class="text-black">About</a></li>
+            <li><a href="index.html#gallery" class="text-black">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 class="text-black fw-bold">Hours</h5>
+          <p class="text-black">Mon-Fri: 10AM - 10PM</p>
+          <p class="text-black">Sat-Sun: 12PM - 11PM</p>
+        </div>
+        <div class="col-md-3">
+          <h5 class="text-black fw-bold">Let's Connect</h5>
+          <a href="#" class="text-black me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-black me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-black me-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-black"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="text-center text-black mt-4">
+        <small>© 2025 Delizioso. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>
